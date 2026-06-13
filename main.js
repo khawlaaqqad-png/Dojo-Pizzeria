@@ -26,3 +26,19 @@ console.log(pizza3);
 
 var pizza4 = pizzaOven("thin crust", "alfredo",["cheddar", "mozzarella"],["chicken", "red onions"])
 console.log(pizza4);
+
+function randomPizza() {
+    var crusts = ["deep dish", "hand tossed", "thin crust"];
+    var sauces = ["traditional", "marinara", "alfredo"];
+    var cheeses = [["mozzarella"], ["mozzarella", "feta"], ["parmesan"]];
+    var toppings = [["pepperoni"], ["mushrooms"], ["chicken"]];
+
+    var randomCrust = crusts[Math.floor(Math.random() * crusts.length)];
+    var randomSauce = sauces[Math.floor(Math.random() * sauces.length)];
+    var randomCheese = cheeses[Math.floor(Math.random() * cheeses.length)];
+    var randomToppings = toppings[Math.floor(Math.random() * toppings.length)];
+
+    return pizzaOven(randomCrust, randomSauce, randomCheese, randomToppings);
+}
+
+console.log(randomPizza());
